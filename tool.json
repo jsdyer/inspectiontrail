@@ -8,7 +8,7 @@
     "inspections",
     "Nova Scotia"
   ],
-  "icon": "clipboard-check",
+  "icon": "file-check-2",
   "url": "/inspectiontrail/",
   "source": "https://github.com/jsdyer/inspectiontrail",
   "hosting": "project",
