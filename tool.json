@@ -1,16 +1,20 @@
 {
-  "id": "coolcode-tool-template",
-  "title": "CoolCode Tool Starter",
-  "description": "A browser-only example that trims lines and removes exact duplicates.",
-  "category": "security",
-  "tags": ["text", "lines", "duplicates"],
-  "icon": "scan-search",
-  "url": "/coolcode-tool-template/",
-  "source": "https://github.com/jsdyer/coolcode-tool-template",
+  "id": "inspectiontrail",
+  "title": "Inspection Trail",
+  "description": "Search Nova Scotia food inspection histories, dated findings, remedies and boil-water advisory timelines.",
+  "category": "places",
+  "tags": [
+    "food",
+    "inspections",
+    "Nova Scotia"
+  ],
+  "icon": "clipboard-check",
+  "url": "/inspectiontrail/",
+  "source": "https://github.com/jsdyer/inspectiontrail",
   "hosting": "project",
   "access": "browser",
   "data_info": {
-    "mode": "local",
-    "detail": "The browser reads the text you paste and compares its lines."
+    "mode": "mixed",
+    "detail": "Nova Scotia official inspection searches and selected dated starter captures."
   }
 }

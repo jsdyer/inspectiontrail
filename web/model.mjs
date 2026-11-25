@@ -1,7 +1,6 @@
-// Keep transformations separate from the DOM so they can be tested directly.
-export function cleanLines(text) {
-  if (typeof text !== 'string') throw new TypeError('Expected text');
-  const lines = text.split(/\r\n|\r|\n/).map(line => line.trim()).filter(Boolean);
-  const unique = [...new Set(lines)];
-  return { text: unique.join('\n'), count: unique.length, removed: lines.length - unique.length };
-}
+export const STORAGE_KEY='coolcode:inspectiontrail:watchlist';
+export function parameters(query,id){const p=new URLSearchParams();for(const k of ['q','town','address','mode'])if(query[k])p.set(k,String(query[k]));if(id)p.set('id',String(id));return p;}
+export function loadWatchlist(storage){try{const v=JSON.parse(storage.getItem(STORAGE_KEY)||'[]');return Array.isArray(v)?v.filter(x=>x&&/^\d{1,12}$/.test(x.id)&&typeof x.name==='string'&&x.query&&typeof x.query==='object').slice(0,200):[];}catch{return [];}}
+export function storeWatchlist(storage,values){try{storage.setItem(STORAGE_KEY,JSON.stringify(values));return true;}catch{return false;}}
+export function advisoryLabel(a){return a.removed?'Issued '+a.issued+' · Removed '+a.removed:'Issued '+a.issued+' · No removal date in this report';}
+export function reportText(report,sourceDate,checkedAt){return [report.name,report.address,'Source edition: '+sourceDate,'Retrieved: '+checkedAt,'Statuses describe the inspection date, not present-day conditions.',...report.advisories.map(advisoryLabel),...report.inspections.flatMap(i=>['\nInspected '+i.date,i.annotation,i.summary,...i.findings.flatMap(f=>[f.status+': '+f.finding,'Remedy: '+f.remedy])])].join('\n');}

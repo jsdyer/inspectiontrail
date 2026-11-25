@@ -1,21 +1,7 @@
-import test from 'node:test';
-import assert from 'node:assert/strict';
-import { cleanLines } from '../web/model.mjs';
-test('trims, removes blanks and preserves first-seen order', () => {
-  assert.deepEqual(cleanLines('  Halifax\nLangley\nHalifax\n\nVancouver  '), {
-    text: 'Halifax\nLangley\nVancouver', count: 3, removed: 1,
-  });
-});
-test('supports Windows and old Mac line endings', () => {
-  assert.equal(cleanLines('a\r\nb\ra').text, 'a\nb');
-});
-test('empty text and whitespace produce an empty result', () => {
-  assert.deepEqual(cleanLines(' \n\t'), { text: '', count: 0, removed: 0 });
-});
-test('preserves case and Unicode', () => {
-  assert.equal(cleanLines('Québec\nquébec\n東京\nQuébec').text, 'Québec\nquébec\n東京');
-});
-test('treats markup as ordinary text', () => {
-  assert.equal(cleanLines('<script>alert(1)</script>\n<script>alert(1)</script>').text, '<script>alert(1)</script>');
-});
-test('rejects non-text input', () => { assert.throws(() => cleanLines(null), TypeError); });
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {inspectionParseSearch,inspectionParseReport} from '../web/source.mjs';import {parameters,loadWatchlist,storeWatchlist,advisoryLabel,reportText} from '../web/model.mjs';
+const search=fs.readFileSync(new URL('./fixtures/search.html',import.meta.url),'utf8'),report=fs.readFileSync(new URL('./fixtures/report.html',import.meta.url),'utf8');
+test('complete official search preserves all23 source establishments, not presets',()=>{const data=inspectionParseSearch(search);assert.equal(data.total,23);assert.equal(data.establishments.length,23);assert.equal(data.source_updated,'24 Nov, 2026 3:12 AM');assert.throws(()=>inspectionParseSearch(search.replace('>23<','>24<')));});
+test('advisory removal dates and historical deficiencies coexist without an active warning inference',()=>{const data=inspectionParseReport(report,'3820280');assert.equal(data.advisories[0].removed,'Nov 18, 2026');assert.equal(data.inspections[0].date,'24 Sep, 2026');assert.equal(data.inspections[0].findings.length,2);assert.equal(data.inspections[0].findings[0].status,'DEFICIENT');assert.match(data.inspections[0].findings[0].remedy,/Post Boil Water Advisory/);assert.match(advisoryLabel(data.advisories[0]),/Removed/);assert.match(reportText(data,'source-date','check-date'),/source-date/);assert.ok(!('score' in data));});
+test('unknown source response fails closed instead of yielding fake empty data',()=>{assert.throws(()=>inspectionParseSearch('<html>Unknown Error</html>'));assert.throws(()=>inspectionParseReport('<html>Unknown Error</html>','123'));});
+test('arbitrary names and towns round trip through encoded parameters',()=>{const p=parameters({q:'A New Café & Co',town:'New Town',mode:'search'},'123');assert.equal(p.get('q'),'A New Café & Co');assert.equal(p.get('id'),'123');});
+test('watchlist survives explicit save/reload and handles disabled storage',()=>{let v=null;const storage={getItem:()=>v,setItem:(k,value)=>v=value};const list=[{id:'123',name:'New Cafe',address:'Somewhere',query:{q:'New Cafe'}}];assert.ok(storeWatchlist(storage,list));assert.deepEqual(loadWatchlist(storage),list);assert.deepEqual(loadWatchlist(null),[]);assert.equal(storeWatchlist(null,list),false);v='{}';assert.deepEqual(loadWatchlist(storage),[]);});

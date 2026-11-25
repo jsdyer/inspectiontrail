@@ -1,37 +1,27 @@
-import { cleanLines } from './model.mjs';
-const input = document.querySelector('#input');
-const output = document.querySelector('#output');
-const status = document.querySelector('#status');
-const copy = document.querySelector('#copy');
-function update() {
-  const result = cleanLines(input.value);
-  output.value = result.text;
-  status.textContent = `${result.count} unique ${result.count === 1 ? 'line' : 'lines'}; ${result.removed} ${result.removed === 1 ? 'duplicate' : 'duplicates'} removed.`;
-  copy.disabled = result.count === 0;
+import {parameters,loadWatchlist,storeWatchlist,advisoryLabel,reportText} from './model.mjs';
+const $=id=>document.getElementById(id),el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
+const storage=(()=>{try{return localStorage}catch{return null}})();
+let watch=loadWatchlist(storage),generation=0,config,snapshot;
+function persist(){$('storage-status').textContent=storeWatchlist(storage,watch)?'Watchlist saved on this device. Re-run a search to check for updates.':'Browser storage is unavailable. Your list will last only while this tab is open.';}
+function fields(){return {q:$('query').value.trim(),town:$('town').value.trim(),address:$('address').value.trim(),mode:$('mode').value};}
+function setFields(q){for(const [id,k] of [['query','q'],['town','town'],['address','address'],['mode','mode']])$(id).value=q[k]||(k==='mode'?'search':'');}
+async function api(kind,query,id){const response=await fetch(config.api_base+'/api/inspectiontrail/'+kind+'?'+parameters(query,id),{signal:AbortSignal.timeout(40000)});const body=await response.json();if(!response.ok)throw new Error(body.error?.message||'The provincial source is unavailable. Try the official search.');if(!body.data||!body.fetched_at)throw new Error('The search returned an unexpected response.');return body;}
+function reportView(report,sourceDate,checkedAt){const box=el('div',undefined,'report');box.append(el('h3','Inspection history'),el('p','Source edition: '+sourceDate+' · Retrieved '+checkedAt,'small'));
+  if(report.advisories.length){box.append(el('h3','Boil-water advisory history'));for(const a of report.advisories)box.append(el('p',advisoryLabel(a),'timeline'));}else box.append(el('p','No boil-water advisory rows published in this report.','small'));
+  for(const item of report.inspections){const section=el('section',undefined,'timeline');section.append(el('h3','Inspected '+item.date));if(item.annotation)section.append(el('p',item.annotation));section.append(el('p',item.summary));for(const finding of item.findings){const block=el('div',undefined,'finding');block.append(el('strong',finding.status+' · at this inspection'),el('p',finding.finding),el('strong','Required remedy'),el('p',finding.remedy));section.append(block);}box.append(section);}
+  const download=el('button','Download this dated report','quiet');download.addEventListener('click',()=>{const blob=new Blob([reportText(report,sourceDate,checkedAt)],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=el('a');a.href=url;a.download='inspectiontrail-'+report.id+'.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});box.append(download);return box;
 }
-input.addEventListener('input', update);
-document.querySelector('#sample').addEventListener('click', () => {
-  input.value = '  Halifax\nLangley\nHalifax\n\nVancouver  ';
-  update();
-});
-document.querySelector('#clear').addEventListener('click', () => {
-  input.value = '';
-  update();
-  input.focus();
-});
-if (navigator.clipboard && window.isSecureContext) {
-  copy.hidden = false;
-  copy.disabled = true;
-  copy.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(output.value);
-      status.textContent = 'Result copied.';
-    } catch {
-      output.focus();
-      output.select();
-      status.textContent = 'Copy was unavailable. The result is selected so you can copy it manually.';
-    }
-  });
+function render(data,query,checkedAt,kind,reports={}){$('results').replaceChildren();$('status').textContent=kind+' · '+data.total+' establishments · Province’s upload: '+data.source_updated+' · Retrieved: '+checkedAt+(data.truncated?' · Showing first 200; refine your search.':'');
+  if(!data.establishments.length)$('results').append(el('p','No establishments matched this search. Try a shorter name, a community or the official source.','notice'));
+  for(const row of data.establishments){const card=el('article',undefined,'card'),actions=el('div',undefined,'actions'),open=el('button','Read inspection history'),save=el('button',watch.some(w=>w.id===row.id)?'Remove from watchlist':'Watch establishment','quiet'),area=el('div');open.setAttribute('aria-expanded','false');
+    card.append(el('span','NOVA SCOTIA · '+kind,'eyebrow'),el('h2',row.name),el('p',row.address));actions.append(open,save);card.append(actions,area);$('results').append(card);
+    save.addEventListener('click',()=>{const existing=watch.some(w=>w.id===row.id);watch=existing?watch.filter(w=>w.id!==row.id):[...watch,{...row,query:{...query}}];save.textContent=existing?'Watch establishment':'Remove from watchlist';persist();});
+    open.addEventListener('click',async()=>{if(open.getAttribute('aria-expanded')==='true'){area.hidden=true;open.setAttribute('aria-expanded','false');open.textContent='Read inspection history';return;}area.hidden=false;open.setAttribute('aria-expanded','true');open.textContent='Hide inspection history';if(area.childNodes.length&&!area.dataset.failed)return;area.dataset.failed='';open.disabled=true;area.replaceChildren(el('p','Reading the dated inspection report…','small'));
+      try{let report=reports[row.id],date=data.source_updated,retrieved=checkedAt;if(!report){const body=await api('report',query,row.id);report=body.data.report;date=body.data.source_updated;retrieved=body.fetched_at;}area.replaceChildren(reportView(report,date,retrieved));}catch(error){area.replaceChildren(el('p',error.message,'notice'));area.dataset.failed='true';open.setAttribute('aria-expanded','false');open.textContent='Retry inspection history';area.addEventListener('click',()=>{}, {once:true});setTimeout(()=>{if(open.getAttribute('aria-expanded')==='false')area.replaceChildren();},30000);}finally{open.disabled=false;}});
+  }
 }
-// Namespace future preference storage as coolcode:<tool-id>:<key>.
-// Do not persist pasted text or uploads by default.
+function starter(c){generation++;setFields(c.query);render(c,c.query,snapshot.checked_at,'Starter capture',c.reports);}
+$('search').addEventListener('submit',async event=>{event.preventDefault();const q=fields();if(q.mode==='search'&&Math.max(q.q.length,q.town.length,q.address.length)<2){$('status').textContent='Enter at least two characters of a name, community or street.';return;}const token=++generation;$('submit').disabled=true;$('status').textContent='Searching the official provincial reports…';try{const result=await api('search',q);if(token===generation)render(result.data,q,result.fetched_at,'Live search');}catch(error){if(token===generation)$('status').textContent=error.message+' The previous results below are unchanged.';}finally{$('submit').disabled=false;}});
+$('show-saved').addEventListener('click',()=>{generation++;$('results').replaceChildren();$('status').textContent=watch.length+' watched establishments · saved on this device';for(const item of watch){const card=el('article',undefined,'card'),button=el('button','Run saved search');card.append(el('h2',item.name),el('p',item.address),button);button.addEventListener('click',()=>{setFields(item.query);$('search').requestSubmit();});$('results').append(card);}if(!watch.length)$('results').append(el('p','Choose “Watch establishment” on a search result to save it here.'));});
+$('clear-saved').addEventListener('click',()=>{watch=[];persist();$('show-saved').click();});
+try{[config,snapshot]=await Promise.all([fetch('./config.json').then(r=>r.json()),fetch('./data/latest.json').then(r=>r.json())]);for(const c of snapshot.captures){const button=el('button',c.query.label,'quiet');button.addEventListener('click',()=>starter(c));$('starters').append(button);}starter(snapshot.captures[0]);}catch{$('status').textContent='The starter capture could not load. Reload the page or use the official provincial search linked below.';}

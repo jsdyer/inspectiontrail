@@ -1,0 +1,31 @@
+{
+  "api_base": "https://coolcode-visitor-api.jeffdyer.workers.dev",
+  "official_search": "https://novascotia.ca/nse/food-protection/reports/Request.aspx",
+  "starter_queries": [
+    {
+      "label": "Donair \u00b7 Halifax",
+      "q": "Donair",
+      "town": "Halifax",
+      "mode": "search",
+      "capture_reports": 4
+    },
+    {
+      "label": "Mic Mac \u00b7 Dartmouth",
+      "q": "Mic Mac",
+      "town": "Dartmouth",
+      "mode": "search",
+      "capture_reports": 2
+    },
+    {
+      "label": "Two If By Sea",
+      "q": "Two If By Sea",
+      "mode": "search",
+      "capture_reports": 2
+    },
+    {
+      "label": "Current closures",
+      "mode": "current-closures",
+      "capture_reports": 5
+    }
+  ]
+}
