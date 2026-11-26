@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "checked_at": "2026-11-25T19:32:22.206873+00:00",
-  "record_count": 8,
+  "checked_at": "2026-11-26T11:37:20.872562+00:00",
+  "record_count": 7,
   "captures": [
     {
       "query": {
@@ -815,14 +815,14 @@
               "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
               "findings": [
                 {
-                  "finding": "29(2)(a) A maintenance, cleaning and sanitation program must include procedures to ensure that all of the following are done: (a) the food establishment and equipment are maintained, cleaned and sanitized;",
-                  "status": "DEFICIENT",
-                  "remedy": "In accordance with Section 4.2.1 of the NS Food Retail and Food Services Code, you must demonstrate that a written sanitation program is in place, which: a. Outlines the parameters to be controlled in the food premises to ensure safety of the food product. b. Includes sanitation procedures for equipment, utensils or refrigeration units that impact on food safety, which must specify: i. areas, items of equipment, and utensils to be cleaned; ii. the designated food handler(s) responsible for the cleaning and sanitizing; iii. the chemicals and/or cleaning products (including concentrations) and process to be used; iv. the procedures used; v. the frequency of cleaning and sanitizing; and vi. inspection and monitoring records. c. Documents that the sanitation program is monitored and its effectiveness verified. d. Reflects the level of risk of the food products as determined by the management plan required in Section 3.0 of this Code. In accordance with Section 4.2.2 of the NS Food Retail and Food Services Code, you must ensure non-food contact surfaces of equipment must be cleaned at a frequency that will prevent the accumulation of dust, dirt, food residue and other debris."
-                },
-                {
                   "finding": "28(2) If an operator is absent from a food establishment, the operator must ensure that a member of the personnel who has successfully completed a food hygiene training program is present.",
                   "status": "DEFICIENT",
                   "remedy": "One person per shift must have a valid food handler certification."
+                },
+                {
+                  "finding": "29(2)(a) A maintenance, cleaning and sanitation program must include procedures to ensure that all of the following are done: (a) the food establishment and equipment are maintained, cleaned and sanitized;",
+                  "status": "DEFICIENT",
+                  "remedy": "In accordance with Section 4.2.1 of the NS Food Retail and Food Services Code, you must demonstrate that a written sanitation program is in place, which: a. Outlines the parameters to be controlled in the food premises to ensure safety of the food product. b. Includes sanitation procedures for equipment, utensils or refrigeration units that impact on food safety, which must specify: i. areas, items of equipment, and utensils to be cleaned; ii. the designated food handler(s) responsible for the cleaning and sanitizing; iii. the chemicals and/or cleaning products (including concentrations) and process to be used; iv. the procedures used; v. the frequency of cleaning and sanitizing; and vi. inspection and monitoring records. c. Documents that the sanitation program is monitored and its effectiveness verified. d. Reflects the level of risk of the food products as determined by the management plan required in Section 3.0 of this Code. In accordance with Section 4.2.2 of the NS Food Retail and Food Services Code, you must ensure non-food contact surfaces of equipment must be cleaned at a frequency that will prevent the accumulation of dust, dirt, food residue and other debris."
                 }
               ]
             }
@@ -931,94 +931,10 @@
         "capture_reports": 5
       },
       "source_updated": "25 Nov, 2026 3:16 AM",
-      "total": 1,
+      "total": 0,
       "truncated": false,
-      "establishments": [
-        {
-          "id": "2965507",
-          "name": "Bizzy Bee Mini Mart Ltd",
-          "address": "1330 MAIN, GLACE BAY"
-        }
-      ],
-      "reports": {
-        "2965507": {
-          "id": "2965507",
-          "name": "Bizzy Bee Mini Mart Ltd",
-          "address": "1330 MAIN, GLACE BAY",
-          "advisories": [],
-          "inspections": [
-            {
-              "date": "17 Nov, 2026",
-              "annotation": "",
-              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
-              "findings": [
-                {
-                  "finding": "19(1)(e) A food establishment must be located, designed, constructed and maintained to ensure all of the following: (e) that there is effective protection to prevent the access and sheltering of insects, rodents and other pests.",
-                  "status": "DEFICIENT",
-                  "remedy": "In accordance with Section 2.3 of the NS Food Retail and Food Services Code, you must ensure walls and ceilings are kept in good repair. In accordance with Section 2.4.1 of the NS Food Retail and Food Services Code, you must ensure floors have coved floor-to-wall joints. In accordance with Section 2.9 of the NS Food Retail and Food Services Code, you must ensure: all shelving and food is maintained a minimum of 15 cm (6 inches) off the floor; storage areas are located in a dry, pest-free location. In accordance with Section 2.17 of the NS Food Retail and Food Services Code, you must ensure exterior openings are protected against the entry of pests. Exterior openings/entry points must be sealed in order to prevent pest entry. In accordance with Section 4.3.3 of the NS Food Retail and Food Services Code, you must immediately treat the presence of pests by inspecting and discarding any adulterated food. In accordance with Section 4.3.4 of the NS Food Retail and Food Services Code, you must: ensure pest control devices are designed and located to effectively control the presence of pests in a food establishment. Eradication of uncontrolled pests must be carried out by a certified pest control operator utilizing approved chemicals and methods. Integrated pest management approaches utilizing the minimal amount of chemical control possible are highly encouraged. Operator must provide the Public health Inspector with a pest control service report form a professional certified pest control operator."
-                },
-                {
-                  "finding": "19(2)(b) A food establishment must provide all of the following in accordance with applicable legislation or as considered acceptable by the Administrator: (b) adequately designed and appropriately located hand-washing facilities;",
-                  "status": "DEFICIENT",
-                  "remedy": "In accordance with Section 2.14 of the NS Food Retail and Food Services Code, you must provide at least one hand washing station in each food preparation area."
-                },
-                {
-                  "finding": "29(2)(a) A maintenance, cleaning and sanitation program must include procedures to ensure that all of the following are done: (a) the food establishment and equipment are maintained, cleaned and sanitized;",
-                  "status": "DEFICIENT",
-                  "remedy": "In accordance with Section 4.2.2 of the NS Food Retail and Food Services Code, you must ensure non-food contact surfaces of equipment must be cleaned at a frequency that will prevent the accumulation of dust, dirt, food residue and other debris. Clean and sanitize all non-food contact surfaces noted to remove rodent droppings, dirt and debris. Ensure that an approved sanitizer is utilized. In accordance with Section 4.2.3 of the NS Food Retail and Food Services Code, you must: a. ensure food contact surfaces of cooking equipment are cleaned and sanitized at a frequency that prevents the accumulation of grease deposits and other residues. Ensure that food contact surfaces noted are cleaned and sanitized to remove dirt, debris, and rodent droppings. Ensure that an approved sanitizer is utilized."
-                },
-                {
-                  "finding": "31(1) Uninspected meats and meat products are not permitted in a food establishment.",
-                  "status": "COMPLIED DURING INSPECTION",
-                  "remedy": "Bottled/preserved meat products were seized and are being held, pending testing results from the operator."
-                }
-              ]
-            },
-            {
-              "date": "26 Feb, 2026",
-              "annotation": "",
-              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
-              "findings": []
-            },
-            {
-              "date": "24 Feb, 2026",
-              "annotation": "",
-              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
-              "findings": [
-                {
-                  "finding": "82(1) No person shall operate a food establishment, unless exempted by an administrator, without first having obtained a permit from an administrator.",
-                  "status": "DEFICIENT",
-                  "remedy": "In accordance with Section 82(1) of the Health Protection Act, you must renew the Food Establishment permit."
-                }
-              ]
-            },
-            {
-              "date": "17 Feb, 2026",
-              "annotation": "",
-              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
-              "findings": [
-                {
-                  "finding": "82(1) No person shall operate a food establishment, unless exempted by an administrator, without first having obtained a permit from an administrator.",
-                  "status": "DEFICIENT",
-                  "remedy": "In accordance with Section 82(1) of the Health Protection Act, you must renew the Food Establishment permit."
-                }
-              ]
-            },
-            {
-              "date": "15 Oct, 2024",
-              "annotation": "",
-              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
-              "findings": [
-                {
-                  "finding": "19(2)(b) A food establishment must provide all of the following in accordance with applicable legislation or as considered acceptable by the Administrator: (b) adequately designed and appropriately located hand-washing facilities;",
-                  "status": "COMPLIED DURING INSPECTION",
-                  "remedy": "In accordance with Section 2.15 of the NS Food Retail and Food Services Code, you must equip toilet rooms for staff with hand washing stations. Handwashing station in the staff washroom must be equipped with liquid soap (Corrected During Inspection)."
-                }
-              ]
-            }
-          ]
-        }
-      }
+      "establishments": [],
+      "reports": {}
     }
   ]
 }
