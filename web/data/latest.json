@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checked_at": "2026-11-26T19:14:56.881955+00:00",
+  "checked_at": "2026-11-27T11:40:59.648208+00:00",
   "record_count": 7,
   "captures": [
     {
@@ -11,7 +11,7 @@
         "mode": "search",
         "capture_reports": 4
       },
-      "source_updated": "26 Nov, 2026 3:13 AM",
+      "source_updated": "27 Nov, 2026 3:13 AM",
       "total": 6,
       "truncated": false,
       "establishments": [
@@ -706,7 +706,7 @@
         "mode": "search",
         "capture_reports": 2
       },
-      "source_updated": "26 Nov, 2026 3:13 AM",
+      "source_updated": "27 Nov, 2026 3:13 AM",
       "total": 6,
       "truncated": false,
       "establishments": [
@@ -857,7 +857,7 @@
         "mode": "search",
         "capture_reports": 2
       },
-      "source_updated": "26 Nov, 2026 3:13 AM",
+      "source_updated": "27 Nov, 2026 3:13 AM",
       "total": 1,
       "truncated": false,
       "establishments": [
@@ -930,7 +930,7 @@
         "mode": "current-closures",
         "capture_reports": 5
       },
-      "source_updated": "26 Nov, 2026 3:13 AM",
+      "source_updated": "27 Nov, 2026 3:13 AM",
       "total": 0,
       "truncated": false,
       "establishments": [],
