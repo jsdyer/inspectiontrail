@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "checked_at": "2026-11-27T19:08:46.447155+00:00",
-  "record_count": 7,
+  "checked_at": "2026-11-28T11:35:28.587256+00:00",
+  "record_count": 8,
   "captures": [
     {
       "query": {
@@ -482,6 +482,11 @@
               "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
               "findings": [
                 {
+                  "finding": "23(1)(b) All equipment and utensils used to process, prepare, store, serve, sell or display food must be designed, constructed, installed and maintained to (b) allow adequate cleaning, sanitizing and maintenance.",
+                  "status": "DEFICIENT",
+                  "remedy": "In accordance with Section 4.1 of the NS Food Retail and Food Services Code, you must ensure all equipment is maintained and functional for its intended use. Repair hot water tap at three compartment sink."
+                },
+                {
                   "finding": "19(1)(a) A food establishment must be located, designed, constructed and maintained to ensure all of the following: (a) that the risk of contaminating the food is minimized;",
                   "status": "DEFICIENT",
                   "remedy": "In accordance with Section 2.3 and Section 2.4.2 of the NS Food Retail and Food Services Code, you must keep all surfaces in good repair. Duct tape at three compartment sink must be removed and area must be sealed properly."
@@ -495,11 +500,6 @@
                   "finding": "23(1)(a) All equipment and utensils used to process, prepare, store, serve, sell or display food must be designed, constructed, installed and maintained to (a) protect food from contamination;",
                   "status": "DEFICIENT",
                   "remedy": "In accordance with Section 2.9 of the NS Food Retail and Food Services Code, you must: store all food and food items a minimum of 15 cm (6 in.) off the floor on racks, shelves or pallets; store all food and food items a minimum of 5 cm (2 in.) from the walls. More shelving required in back storage area, remove milk crates as you can not clean under crates, large amount of mouse droppings in area."
-                },
-                {
-                  "finding": "23(1)(b) All equipment and utensils used to process, prepare, store, serve, sell or display food must be designed, constructed, installed and maintained to (b) allow adequate cleaning, sanitizing and maintenance.",
-                  "status": "DEFICIENT",
-                  "remedy": "In accordance with Section 4.1 of the NS Food Retail and Food Services Code, you must ensure all equipment is maintained and functional for its intended use. Repair hot water tap at three compartment sink."
                 },
                 {
                   "finding": "23(1)(b) All equipment and utensils used to process, prepare, store, serve, sell or display food must be designed, constructed, installed and maintained to (b) allow adequate cleaning, sanitizing and maintenance.",
@@ -760,11 +760,6 @@
               "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
               "findings": [
                 {
-                  "finding": "19(2)(b) A food establishment must provide all of the following in accordance with applicable legislation or as considered acceptable by the Administrator: (b) adequately designed and appropriately located hand-washing facilities;",
-                  "status": "COMPLIED DURING INSPECTION",
-                  "remedy": "Hand sink in the kitchen must have paper towel in a dispenser."
-                },
-                {
                   "finding": "19(1)(c) A food establishment must be located, designed, constructed and maintained to ensure all of the following: (c) that the surfaces and materials are durable, non-toxic and are easy to maintain, clean and sanitize;",
                   "status": "DEFICIENT",
                   "remedy": "In accordance with Section 2.3 of the NS Food Retail and Food Services Code, you must ensure walls and ceilings are constructed of finishes which are smooth, impermeable, and washable. In accordance with Section 2.4.2 of the NS Food Retail and Food Services Code, you must ensure all floors are durable, easily cleanable and non-slip. Replace/repair all missing wall and floor tiles in the kitchen."
@@ -773,6 +768,11 @@
                   "finding": "19(1)(e) A food establishment must be located, designed, constructed and maintained to ensure all of the following: (e) that there is effective protection to prevent the access and sheltering of insects, rodents and other pests.",
                   "status": "DEFICIENT",
                   "remedy": "In accordance with Section 2.3 of the NS Food Retail and Food Services Code, you must ensure walls and ceilings are kept in good repair. In accordance with Section 2.4.1 of the NS Food Retail and Food Services Code, you must ensure floors have coved floor-to-wall joints. In accordance with Section 2.17 of the NS Food Retail and Food Services Code, you must ensure exterior openings are protected against the entry of pests. Follow structural repair recommendations outlined by pest control company."
+                },
+                {
+                  "finding": "19(2)(b) A food establishment must provide all of the following in accordance with applicable legislation or as considered acceptable by the Administrator: (b) adequately designed and appropriately located hand-washing facilities;",
+                  "status": "COMPLIED DURING INSPECTION",
+                  "remedy": "Hand sink in the kitchen must have paper towel in a dispenser."
                 },
                 {
                   "finding": "29(2)(a) A maintenance, cleaning and sanitation program must include procedures to ensure that all of the following are done: (a) the food establishment and equipment are maintained, cleaned and sanitized;",
@@ -931,10 +931,257 @@
         "capture_reports": 5
       },
       "source_updated": "27 Nov, 2026 3:13 AM",
-      "total": 0,
+      "total": 1,
       "truncated": false,
-      "establishments": [],
-      "reports": {}
+      "establishments": [
+        {
+          "id": "1310127",
+          "name": "GIGANTIC VIDEO AND GROCERY",
+          "address": "1030 SOUTH PARK, HALIFAX"
+        }
+      ],
+      "reports": {
+        "1310127": {
+          "id": "1310127",
+          "name": "GIGANTIC VIDEO AND GROCERY",
+          "address": "1030 SOUTH PARK, HALIFAX",
+          "advisories": [],
+          "inspections": [
+            {
+              "date": "27 Nov, 2026",
+              "annotation": "",
+              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
+              "findings": [
+                {
+                  "finding": "18A A person must not begin to construct a new food establishment or renovate or expand an existing food establishment until construction plans and specifications are submitted to and approved by an inspector.",
+                  "status": "DEFICIENT",
+                  "remedy": "In accordance with Section 2.2.2 of the NS Food Retail and Food Services Code, with regard to alterations to existing facilities, if the alterations are major or involve items or equipment that are specified in the Code, you must submit the plans and specifications regarding the alterations to be approved by the Department. Immediately remove the cooking equipment from the premises."
+                },
+                {
+                  "finding": "19(1)(e) A food establishment must be located, designed, constructed and maintained to ensure all of the following: (e) that there is effective protection to prevent the access and sheltering of insects, rodents and other pests.",
+                  "status": "DEFICIENT",
+                  "remedy": "Address the clutter in the back area of the store to prevent pest harborage. Pest control must be conducted by a licensed pest control operator using approved products."
+                },
+                {
+                  "finding": "50(a) An operator must ensure that articles, equipment or materials not associated with the processing or preparation of food are stored (a) separately from areas where food is processed or prepared;",
+                  "status": "DEFICIENT",
+                  "remedy": "Remove open bags of food ingredients and other items involved in food preparation from the premises."
+                },
+                {
+                  "finding": "83(1) An administrator shall not issue or renew a permit, or may suspend or revoke a permit, in respect of a food establishment to an applicant under Section 82 or a person providing notification under Section 82A where the administrator is of the opinion that:",
+                  "status": "DEFICIENT",
+                  "remedy": "Food Establishment Permit suspended under administrative closure order. Facility must address all outstanding items prior to re-inspection."
+                }
+              ]
+            },
+            {
+              "date": "18 Nov, 2026",
+              "annotation": "",
+              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
+              "findings": [
+                {
+                  "finding": "18A A person must not begin to construct a new food establishment or renovate or expand an existing food establishment until construction plans and specifications are submitted to and approved by an inspector.",
+                  "status": "WARNING REPORT",
+                  "remedy": "In accordance with Section 2.2.2 of the NS Food Retail and Food Services Code, with regard to alterations to existing facilities, if the alterations are major or involve items or equipment that are specified in the Code, you must submit the plans and specifications regarding the alterations to be approved by the Department. Immediately remove the cooking equipment from the premises."
+                },
+                {
+                  "finding": "19(1)(e) A food establishment must be located, designed, constructed and maintained to ensure all of the following: (e) that there is effective protection to prevent the access and sheltering of insects, rodents and other pests.",
+                  "status": "WARNING REPORT",
+                  "remedy": "Address the clutter in the back area of the store to prevent pest harborage."
+                },
+                {
+                  "finding": "20(1) A food establishment must have washroom facilities for staff and washroom facilities for the public available in a convenient location, unless exempted by the Administrator.",
+                  "status": "WARNING REPORT",
+                  "remedy": "Ensure the staff washroom is supplied with paper towel in a paper towel dispenser."
+                },
+                {
+                  "finding": "50(a) An operator must ensure that articles, equipment or materials not associated with the processing or preparation of food are stored (a) separately from areas where food is processed or prepared;",
+                  "status": "WARNING REPORT",
+                  "remedy": "Secure the reach-in cooler with 'personal food' or move it to a secure location, inaccessible for the public."
+                }
+              ]
+            },
+            {
+              "date": "17 Nov, 2026",
+              "annotation": "",
+              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
+              "findings": [
+                {
+                  "finding": "18A A person must not begin to construct a new food establishment or renovate or expand an existing food establishment until construction plans and specifications are submitted to and approved by an inspector.",
+                  "status": "DEFICIENT",
+                  "remedy": "In accordance with Section 2.2.2 of the NS Food Retail and Food Services Code, with regard to alterations to existing facilities, if the alterations are major or involve items or equipment that are specified in the Code, you must submit the plans and specifications regarding the alterations to be approved by the Department. Immediately remove the cooking equipment from the premises."
+                },
+                {
+                  "finding": "19(1)(e) A food establishment must be located, designed, constructed and maintained to ensure all of the following: (e) that there is effective protection to prevent the access and sheltering of insects, rodents and other pests.",
+                  "status": "DEFICIENT",
+                  "remedy": "Address the clutter in the back area of the store to prevent pest harborage."
+                },
+                {
+                  "finding": "20(1) A food establishment must have washroom facilities for staff and washroom facilities for the public available in a convenient location, unless exempted by the Administrator.",
+                  "status": "COMPLIED DURING INSPECTION",
+                  "remedy": "Ensure the staff washroom is supplied with paper towel in a paper towel dispenser."
+                },
+                {
+                  "finding": "50(a) An operator must ensure that articles, equipment or materials not associated with the processing or preparation of food are stored (a) separately from areas where food is processed or prepared;",
+                  "status": "DEFICIENT",
+                  "remedy": "Secure the reach-in cooler with 'personal food' or move it to a secure location, inaccessible for the public."
+                }
+              ]
+            },
+            {
+              "date": "25 Aug, 2026",
+              "annotation": "",
+              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
+              "findings": [
+                {
+                  "finding": "18A A person must not begin to construct a new food establishment or renovate or expand an existing food establishment until construction plans and specifications are submitted to and approved by an inspector.",
+                  "status": "WARNING REPORT",
+                  "remedy": "In accordance with Section 2.2.2 of the NS Food Retail and Food Services Code, with regard to alterations to existing facilities, if the alterations are major or involve items or equipment that are specified in the Code, you must submit the plans and specifications regarding the alterations to be approved by the Department"
+                }
+              ]
+            },
+            {
+              "date": "20 Aug, 2026",
+              "annotation": "",
+              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
+              "findings": [
+                {
+                  "finding": "18A A person must not begin to construct a new food establishment or renovate or expand an existing food establishment until construction plans and specifications are submitted to and approved by an inspector.",
+                  "status": "DEFICIENT",
+                  "remedy": "In accordance with Section 2.2.2 of the NS Food Retail and Food Services Code, with regard to alterations to existing facilities, if the alterations are major or involve items or equipment that are specified in the Code, you must submit the plans and specifications regarding the alterations to be approved by the Department. Immediately remove the cooking equipment from the premises."
+                },
+                {
+                  "finding": "19(1)(e) A food establishment must be located, designed, constructed and maintained to ensure all of the following: (e) that there is effective protection to prevent the access and sheltering of insects, rodents and other pests.",
+                  "status": "DEFICIENT",
+                  "remedy": "Address the clutter in the back area of the store to prevent pest harborage."
+                },
+                {
+                  "finding": "20(1) A food establishment must have washroom facilities for staff and washroom facilities for the public available in a convenient location, unless exempted by the Administrator.",
+                  "status": "DEFICIENT",
+                  "remedy": "Ensure the staff washroom is supplied with paper towel in a paper towel dispenser."
+                },
+                {
+                  "finding": "50(a) An operator must ensure that articles, equipment or materials not associated with the processing or preparation of food are stored (a) separately from areas where food is processed or prepared;",
+                  "status": "DEFICIENT",
+                  "remedy": "Secure the reach-in cooler with 'personal food' or move it to a secure location, inaccessible for the public."
+                },
+                {
+                  "finding": "8(2) A permit or notification receipt must be posted in a conspicuous location in the food establishment.",
+                  "status": "NON CRITICAL",
+                  "remedy": "Ensure the most recent permit is posted."
+                }
+              ]
+            },
+            {
+              "date": "16 Mar, 2026",
+              "annotation": "",
+              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
+              "findings": [
+                {
+                  "finding": "82(1) No person shall operate a food establishment, unless exempted by an administrator, without first having obtained a permit from an administrator.",
+                  "status": "DEFICIENT",
+                  "remedy": "In accordance with Section 82(1) of the Health Protection Act, you must renew your Food Establishment permit within the next three business days."
+                },
+                {
+                  "finding": "82(1) No person shall operate a food establishment, unless exempted by an administrator, without first having obtained a permit from an administrator.",
+                  "status": "WARNING REPORT",
+                  "remedy": "In accordance with Section 82(1) of the Health Protection Act, you must renew your Food Establishment permit within the next three business days."
+                },
+                {
+                  "finding": "9(a) An operator must renew a permit, other than a temporary permit, on or before the expiry date by submitting a completed renewal application to the Minister on a form approved by the Administrator together with all of the following: (a) the applicable fee prescribed in Section 5;",
+                  "status": "DEFICIENT",
+                  "remedy": "Renew the permit within the next three business days."
+                },
+                {
+                  "finding": "9(a) An operator must renew a permit, other than a temporary permit, on or before the expiry date by submitting a completed renewal application to the Minister on a form approved by the Administrator together with all of the following: (a) the applicable fee prescribed in Section 5;",
+                  "status": "WARNING REPORT",
+                  "remedy": "Renew the permit within the next three business days."
+                }
+              ]
+            },
+            {
+              "date": "25 Feb, 2026",
+              "annotation": "",
+              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
+              "findings": [
+                {
+                  "finding": "82(1) No person shall operate a food establishment, unless exempted by an administrator, without first having obtained a permit from an administrator.",
+                  "status": "DEFICIENT",
+                  "remedy": "In accordance with Section 82(1) of the Health Protection Act, you must renew your Food Establishment permit within the next ten business days."
+                },
+                {
+                  "finding": "9(a) An operator must renew a permit, other than a temporary permit, on or before the expiry date by submitting a completed renewal application to the Minister on a form approved by the Administrator together with all of the following: (a) the applicable fee prescribed in Section 5;",
+                  "status": "DEFICIENT",
+                  "remedy": "Renew the permit within the next ten business days."
+                }
+              ]
+            },
+            {
+              "date": "5 Feb, 2025",
+              "annotation": "",
+              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and no deficiencies or Warning Reports were issued at the time of the inspection.",
+              "findings": []
+            },
+            {
+              "date": "28 Mar, 2024",
+              "annotation": "",
+              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and no deficiencies or Warning Reports were issued at the time of the inspection.",
+              "findings": []
+            },
+            {
+              "date": "20 Mar, 2024",
+              "annotation": "",
+              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
+              "findings": [
+                {
+                  "finding": "9(a) An operator must renew a permit, other than a temporary permit, on or before the expiry date by submitting a completed renewal application to the Minister on a form approved by the Administrator together with all of the following: (a) the applicable fee prescribed in Section 5;",
+                  "status": "DEFICIENT",
+                  "remedy": "Food Establishment Permit - Food Shop expired on December 4, 2023. Renew Food Establishment Permit within the next 5 business days."
+                }
+              ]
+            },
+            {
+              "date": "28 Feb, 2024",
+              "annotation": "",
+              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
+              "findings": [
+                {
+                  "finding": "20(2) A washroom facility must be constructed, equipped, and designed in accordance with the Nova Scotia Building Code.",
+                  "status": "DEFICIENT",
+                  "remedy": "No paper towel dispenser/holder observed at the hand wash sink in the staff washroom. Supply a paper towel dispenser/holder at the hand wash sink in the staff washroom."
+                },
+                {
+                  "finding": "9(a) An operator must renew a permit, other than a temporary permit, on or before the expiry date by submitting a completed renewal application to the Minister on a form approved by the Administrator together with all of the following: (a) the applicable fee prescribed in Section 5;",
+                  "status": "DEFICIENT",
+                  "remedy": "Food Establishment Permit - Food Shop expired on December 4, 2023. Renew Food Establishment Permit within the next 5 business days."
+                }
+              ]
+            },
+            {
+              "date": "7 Feb, 2024",
+              "annotation": "",
+              "summary": "This establishment was inspected by the Nova Scotia Environment Inspection, Compliance and Enforcement Division, and the following deficiencies and/or Warning Reports were issued at the time of the inspection:",
+              "findings": [
+                {
+                  "finding": "20(2) A washroom facility must be constructed, equipped, and designed in accordance with the Nova Scotia Building Code.",
+                  "status": "DEFICIENT",
+                  "remedy": "No paper towel dispenser/holder observed at the hand wash sink in the staff washroom. Supply a paper towel dispenser/holder at the hand wash sink in the staff washroom."
+                },
+                {
+                  "finding": "29(2)(a) A maintenance, cleaning and sanitation program must include procedures to ensure that all of the following are done: (a) the food establishment and equipment are maintained, cleaned and sanitized;",
+                  "status": "NON CRITICAL",
+                  "remedy": "Dust build-up observed on the ceiling of the walk-in cooler. Clean ceiling in the walk-in cooler to remove dust build-up."
+                },
+                {
+                  "finding": "9(a) An operator must renew a permit, other than a temporary permit, on or before the expiry date by submitting a completed renewal application to the Minister on a form approved by the Administrator together with all of the following: (a) the applicable fee prescribed in Section 5;",
+                  "status": "DEFICIENT",
+                  "remedy": "Food Establishment Permit - Food Shop expired on December 4, 2023. Renew Food Establishment Permit within the next 5 business days."
+                }
+              ]
+            }
+          ]
+        }
+      }
     }
   ]
 }
